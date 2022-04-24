@@ -1,0 +1,9 @@
+USE [IF5100_2022_B76090]
+GO
+INSERT INTO [CUSTOMERS].[tb_CREDIT_CARD_BRANDS]
+           ([CREDIT_CARD_BRAND_NAME])
+     VALUES
+			('MasterCard')
+			,('AMEX')
+			,('VISA')
+GO

@@ -20,13 +20,13 @@ INSERT INTO [CUSTOMERS].[tb_STATE_PROVINCE](
 	('Puebla', 3, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
 	('Nuevo Leon', 3, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
 
-	('Bocas del Toro', 104, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
-	('Barcelona', 105, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
-	('Caranavi', 106, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
-	('San Salvador', 107, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
-	('Tegulcigalpa', 108, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
-	('Berlin', 109, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
-	('Viena', 110, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z');
+	('Bocas del Toro', 4, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
+	('Barcelona', 5, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
+	('Caranavi', 6, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
+	('San Salvador', 7, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
+	('Tegulcigalpa', 8, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
+	('Berlin', 9, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z'),
+	('Viena', 10, 1, 0, 'laboratorios', '2022-01-13T04:52:22Z');
 
 	SELECT * FROM CUSTOMERS.tb_COUNTRY
 	SELECT * FROM CUSTOMERS.tb_STATE_PROVINCE

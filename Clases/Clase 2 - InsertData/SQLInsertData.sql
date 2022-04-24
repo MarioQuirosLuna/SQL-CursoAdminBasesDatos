@@ -1,3 +1,5 @@
+/**
+
 USE [IF5100_2022_B76090]
 GO
 INSERT INTO [CUSTOMERS].[tb_COUNTRY]
@@ -157,25 +159,25 @@ INSERT INTO [CLI_COMMON].[tb_CLIENTS]
            ,[LAST_MODIFIED_DATE])
      VALUES
            ('BAC'
-           ,'Empty Data'
+           ,'Financiero'
            ,1
            ,0
            ,SUSER_NAME()
            ,GETDATE()),
 		   ('BN'
-           ,'Empty Data'
+           ,'Financiero'
            ,1
            ,0
            ,SUSER_NAME()
            ,GETDATE()),
 		   ('BCR'
-           ,'Empty Data'
+           ,'Financiero'
            ,1
            ,0
            ,SUSER_NAME()
            ,GETDATE()),
 		   ('BP'
-           ,''
+           ,'Financiero'
            ,1
            ,0
            ,SUSER_NAME()

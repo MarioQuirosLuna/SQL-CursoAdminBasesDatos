@@ -10,6 +10,7 @@ INSERT INTO [FINANCIAL_DEPOSIT].[tb_CURRENCY]
 		   ('Colon'),
 		   ('Soles'),
 		   ('Yen'),
-		   ('Libras')
+		   ('Libras'),
+		   ('Peso Mexicano')
 GO
 SELECT * FROM [FINANCIAL_DEPOSIT].[tb_CURRENCY]
