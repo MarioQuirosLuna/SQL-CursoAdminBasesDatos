@@ -1,0 +1,26 @@
+Paso 1: DB en Postgresql (UCR)
+	-Producto
+	-Cliente
+	-Ventas
+	-Detalles de venta
+	-Tarjetas de credito
+	-Categorias
+
+Paso 2: Almacen de datos en SQL (NUBE)
+
+Paso 3: ETL
+	-Python 
+	-SSIS
+
+Paso 4: Cubo OLAP
+	-SSAS
+
+Paso 5: Reporte final
+	-Power BI
+
+SLQ
+	-ANALISIS SERVICES
+	-INTEGRATION SERVICES
+
+VISUAL STUDIO
+	-DATA TOOLS
