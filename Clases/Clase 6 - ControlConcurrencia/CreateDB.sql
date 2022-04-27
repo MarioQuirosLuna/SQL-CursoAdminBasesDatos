@@ -1,0 +1,21 @@
+CREATE DATABASE ProblemasDeConcurrencia
+
+USE ProblemasDeConcurrencia
+
+CREATE TABLE CUENTA_BANCARIA
+(
+	ID INT IDENTITY(1,1) NOT NULL,
+	USUARIO VARCHAR(50) NOT NULL,
+	DINERO INT
+)
+
+
+INSERT INTO [dbo].[CUENTA_BANCARIA]
+    ([USUARIO], [DINERO])
+VALUES
+    ('Juan Fernandez', 100000),
+	('Carlos Pereira', 0)
+
+
+
+SELECT * FROM CUENTA_BANCARIA
