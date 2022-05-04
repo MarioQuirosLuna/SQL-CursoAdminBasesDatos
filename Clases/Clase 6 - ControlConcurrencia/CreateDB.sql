@@ -14,7 +14,7 @@ INSERT INTO [dbo].[CUENTA_BANCARIA]
     ([USUARIO], [DINERO])
 VALUES
     ('Juan Fernandez', 100000),
-	('Carlos Pereira', 0)
+	('Carlos Pereira', 20000)
 
 
 
