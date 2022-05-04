@@ -21,3 +21,12 @@ SELECT * FROM [CUSTOMERS].[tb_BALANCE]
 EXEC [dbo].[sp_MoveMoneyFromCustomerAccount] @param_CustomerAccountIdSource = 1,
 	@param_CustomerAccountIdDestination = 2,
 	@param_Amount = 1000
+
+
+EXEC [dbo].[sp_MoveMoneyFromCustomerAccount] @param_CustomerAccountIdSource = 1,
+	@param_CustomerAccountIdDestination = 2,
+	@param_Amount = 2000
+
+SELECT * FROM [CUSTOMERS].[tb_BALANCE]
+SELECT * FROM [FINANCIAL_DEPOSIT].[tb_ERROR]
+SELECT * FROM [FINANCIAL_DEPOSIT].[tb_EVENTS]
