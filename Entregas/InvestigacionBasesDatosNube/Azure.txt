@@ -1,0 +1,6 @@
+Crear el servidor
+	-nombre (if5100server2022)
+	-localizacion
+Crear sesión administradora del servidor
+	-login (IF5100)
+	-contraseña (admin.2022)
