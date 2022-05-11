@@ -24,7 +24,7 @@ EXEC [dbo].[sp_CustomerAccounts_CRUD]
 
 
 --TEST DELETE:
--- Cambia la columna IS_DELETED a 0
+-- Cambia la columna IS_DELETED a 1
 
 EXEC [dbo].[sp_CustomerAccounts_CRUD]
 	@param_Action = 'D',
@@ -47,7 +47,7 @@ EXEC [dbo].[sp_CustomerAccounts_CRUD]
 	@param_ClientID = 1000, /**(1000=BAC,1001=BN,1002=BCR,1003=BP)*/
 	@param_CustomerName = 'Rafael',
 	@param_CustomerLastName = 'Brown',
-	@param_PhoneNumber = '123654333',
+	@param_PhoneNumber = '123655555',
 	@param_AddressCountryName = 'Costa Rica',
 	@param_AddressStateProvinceName = 'Cartago',
 	@param_AddressDetails = '100mts al norte de la universidad de Costa Rica',
@@ -55,7 +55,7 @@ EXEC [dbo].[sp_CustomerAccounts_CRUD]
 	@param_CreditCardBrandId = 3, /**(1=Visa, 2=MasterCard, 3=AMEX)*/
 	@param_ExpirationMonth = 6,
 	@param_ExpirationYear = 2023,
-	@param_CVV = 329
+	@param_CVV = 320
 
 
 
