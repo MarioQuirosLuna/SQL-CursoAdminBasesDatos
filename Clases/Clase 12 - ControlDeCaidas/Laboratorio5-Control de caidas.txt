@@ -1,0 +1,11 @@
+Laboratorio #5
+
+-> Recuperación de caídas
+
+¿Qué es? ¿Cómo funciona? ¿Para qué sirve? ¿Ventajas? ¿Desventajas?
+
+1. Tipo de BackUp
+2. Razones de fallo de una BD.
+3. Cada cuanto generar BackUps?
+4. Cluster de BD.
+5. HighAvailability SQL Server.
