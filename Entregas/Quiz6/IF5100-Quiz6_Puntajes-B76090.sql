@@ -1,0 +1,76 @@
+CREATE DATABASE QUIZ_JUGADORES;
+
+USE QUIZ_JUGADORES;
+
+CREATE TABLE tb_Jugadores
+(
+	ID INT PRIMARY KEY IDENTITY(1,1),
+	NOMBRE VARCHAR(100),
+	RANKING INT,
+	PUNTAJE_OBTENIDO INT
+);
+
+INSERT INTO tb_Jugadores
+(NOMBRE, RANKING, PUNTAJE_OBTENIDO)
+VALUES
+('Jugador 1',1,10),
+('Jugador 2',2,9),
+('Jugador 3',3,8),
+('Jugador 4',4,7),
+('Jugador 5',5,6),
+('Jugador 6',6,5),
+('Jugador 7',7,4),
+('Jugador 8',8,3),
+('Jugador 9',9,2),
+('Jugador 10',10,1);
+
+
+
+CREATE PROCEDURE sp_SumaPuntos
+	@ID INT = NULL,
+	@NOMBRE VARCHAR(100) = NULL,
+	@PUNTOS INT = NULL
+AS
+BEGIN
+	UPDATE tb_Jugadores
+	SET PUNTAJE_OBTENIDO += @PUNTOS
+	WHERE (ID = @ID OR @ID IS NULL) AND (NOMBRE = @NOMBRE OR @NOMBRE IS NULL)
+END
+
+
+
+CREATE TRIGGER tr_Update_Ranking
+ON tb_Jugadores 
+FOR UPDATE 
+AS 
+BEGIN
+	UPDATE tb_Jugadores
+	SET RANKING =	NEW_RANKING.REAL_RANKING 
+		FROM tb_Jugadores
+		JOIN (
+			SELECT
+				ID,
+				PUNTAJE_OBTENIDO,
+				ROW_NUMBER() OVER (ORDER BY PUNTAJE_OBTENIDO DESC) AS REAL_RANKING
+			FROM tb_Jugadores
+		) AS NEW_RANKING
+		ON NEW_RANKING.ID = tb_Jugadores.ID
+END
+
+
+UPDATE tb_Jugadores
+SET RANKING =	NEW_RANKING.REAL_RANKING 
+				FROM tb_Jugadores
+				JOIN (
+					SELECT
+						ID,
+						PUNTAJE_OBTENIDO,
+						ROW_NUMBER() OVER (ORDER BY PUNTAJE_OBTENIDO DESC) AS REAL_RANKING
+					FROM tb_Jugadores
+				) AS NEW_RANKING
+				ON NEW_RANKING.ID = tb_Jugadores.ID
+
+
+EXEC [dbo].[sp_SumaPuntos] @ID = 2, @NOMBRE=NULL,@PUNTOS=10
+
+SELECT * FROM tb_Jugadores ORDER BY RANKING
